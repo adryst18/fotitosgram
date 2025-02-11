@@ -1,0 +1,75 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* 🔥 Animación del fondo en degradado */
+@keyframes backgroundTransition {
+  0% {
+    background: #3a0ca3; /* Morado inicial */
+  }
+  25% {
+    background: #200a78; /* Más oscuro */
+  }
+  50% {
+    background: #5b2cc5; /* Un tono más claro */
+  }
+  75% {
+    background: #200a78; /* Regresa al oscuro */
+  }
+  100% {
+    background: #3a0ca3; /* Regresa al inicial */
+  }
+}
+
+.animated-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: backgroundTransition 10s infinite alternate ease-in-out;
+}
+
+.welcome-section {
+  margin-top: 20px;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.profile-icon {
+  font-size: 80px;
+  color: white;
+  animation: bounce 1s ease-in-out 2;
+}
+
+.button-group ion-button {
+  margin: 10px 5px;
+}
+
+.my-account-section {
+  margin-top: 20px;
+  padding: 10px;
+  animation: fadeInUp 0.8s ease-in-out 0.2s;
+}
+
+.my-account-section h3 {
+  color: white;
+  margin-bottom: 10px;
+}
